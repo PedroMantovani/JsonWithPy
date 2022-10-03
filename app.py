@@ -10,12 +10,10 @@ def main():
 
 @app.route('/api/upper', methods=['POST'])
 def upper():
-
     json = request.get_json()
     first_name = json['first'].upper()
     last_name = json['last'].upper()
     valor = json['combo'].upper()
-    print(f'{first_name} - {last_name} - {valor}')
     return jsonify(first_name=first_name,last_name=last_name,valor=valor)
 
 
@@ -23,4 +21,3 @@ def upper():
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))
     app.run(host='0.0.0.0', port=port)
-

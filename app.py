@@ -13,8 +13,8 @@ def upper():
     json = request.get_json()
     first_name = json['first'].upper()
     last_name = json['last'].upper()
-    valor = json['combo'].upper()
-    return jsonify(first_name=first_name,last_name=last_name,valor=valor)
+    value = json['combo'].upper()
+    return jsonify(first_name=first_name,last_name=last_name,value=value)
 
 
 
